@@ -1,0 +1,270 @@
+/*----------------------------------------
+          skills section styling 
+------------------------------------------*/
+
+
+a:link{
+    text-decoration: none;
+}
+
+.my_navbar {
+    background-color: #705df2;
+}
+
+.my_navbar .max-width .menu li a:hover{
+    color: black;
+    text-shadow: -1px 1px 2px black;
+}
+
+/* .my_navbar.sticky{
+    padding: 10px 0;
+    background: #705df2;
+} */
+
+#lio{
+    color: black;
+}
+
+
+
+.skills_page .skills{
+    /* background: url("images/banner0.jpg") no-repeat center;
+    background-attachment: fixed; */
+    background-color: white;
+    /* color: black; */
+}
+
+.skills .title::after{
+    content: "what i know";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+/* .skills .skills-content .left .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left .head{
+    color: #705df2;
+}
+
+.skills .skills-content .left .text li{
+    text-indent: 2%;
+}
+
+.skills .skills-content .left p{
+    text-align: justify;
+}
+
+.skills .skills-content .left a{
+    display: inline-block;
+    background: #705df2;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #705df2;
+    transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover{
+    color: #705df2;
+    background: none;
+} */
+
+.skills .skills-content .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content span{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills-content .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #705df2;
+}
+
+.skills-content .right .java::before{
+    width: 90%;
+}
+
+.skills-content .right .C::before{
+    width: 80%;
+}
+
+.skills-content .right .Csh::before{
+    width: 60%;
+}
+
+.skills-content .right .php::before{
+    width: 50%;
+}
+
+.skills-content .right .mysql::before{
+    width: 70%;
+}
+.skills-content .left .py::before{
+    width: 60%;
+}
+.skills-content .left .html::before{
+    width: 100%;
+}
+.skills-content .left .css::before{
+    width: 80%;
+}
+.skills-content .left .js::before{
+    width: 60%;
+}
+.skills-content .left .git::before{
+    width: 80%;
+}
+
+
+.numbering{
+    color: #705df2;
+    font-size: 3em;
+}
+
+.course_date{
+    color: #705df2;
+    text-indent: 5%;
+}
+.cts-path{
+    max-width: 100%;
+}
+
+.train_head{
+    margin-bottom: 0;
+}
+
+.train_content_outer{
+    margin: 50px 0;
+    /* box-shadow:  1px 2px 4px black; */
+    border-radius: 15px;
+    transition: all ease 0.2s;
+}
+
+.train_content_outer:hover{
+    box-shadow:  2px 8px 16px black;
+}
+.train_content{
+    border-radius: 15px;
+    padding: 30px;
+    /* background-color: rgb(240, 240, 240); */
+    background-color: #f0eefd;
+}
+
+em{
+    color: #705df2;
+}
+
+em:hover{
+    text-shadow: -1px 1px 2px #705df2;
+}
+
+.attatchments {
+    display: inline-block;
+    background: #705df2;
+    color: #fff;
+    /* font-size: 25px; */
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #705df2;
+    transition: all 0.3s ease;
+}
+
+
+.attatchments:hover {
+    color: #705df2;
+    background: none;
+}
+
+.achieve_content_outer{
+    width: 100%;
+}
+
+/* .box img{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10%;
+    margin-top: 30px;
+    border-radius: 10px;
+} */
+
+/* .box img:hover{
+    transform: scale(1.2);
+    transition: all ease 0.1s;
+    overflow: hidden;
+} */
+
+/* IMAGE ZOOM IN STARTS*/
+
+.item-zoom {
+	width: 90%;
+    height: 300px;
+    margin: 10% 10% 30px 5%;
+
+	position: relative;
+	/* border: 1px solid #333; */
+	overflow: hidden;
+    border-radius: 10px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.item-zoom img {
+    width: 100%;
+    height: 300px;
+    /* margin-bottom: 10%; */
+    /* margin-top: 30px; */
+    border-radius: 10px;
+
+	vertical-align: top;
+	max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.item-zoom:hover img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* IMAGE ZOOM IN ENDS*/
+
+
+
+
+.achieve_content .box{
+    margin: 10px;
+    background-color: #f0eefd;
+    padding-bottom: 40px;
+}
