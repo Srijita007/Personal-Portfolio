@@ -341,7 +341,7 @@ section .title::after{
     display: flex;
     position: relative;
     z-index: -1;
-    background: url("images/land2\ cropped.png") no-repeat 85% 80%;
+    background: url("images/landing.png") no-repeat 85% 80%;
     
     background-color: #222;
     height: 100vh;
