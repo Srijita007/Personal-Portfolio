@@ -919,11 +919,10 @@ experiences section styling
     height: 50%;
     width: 100%;
     text-align: center;
-    border: 2px solid var(--first-color);
+    border: 2px solid #705df2;
     border-radius: 10px;
     overflow: hidden;
 }
-
 
 .map-zoom {
 	position: relative;
@@ -934,6 +933,8 @@ experiences section styling
 }
 
 .map-zoom iframe {
+    height: 100%;
+    width: 100%;
 	vertical-align: top;
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
@@ -945,6 +946,7 @@ experiences section styling
 	-webkit-transform: scale(1.03);
 	transform: scale(1.03);
 }
+
 
 
 
