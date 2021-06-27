@@ -8,6 +8,13 @@
     text-decoration: none;
 }
 
+body{
+    position: relative;
+    z-index: -1000;
+}
+
+
+
 :root{
     --bg-black-900: black;
     --bg-black-100: #dddddd;
@@ -380,7 +387,9 @@ section .title::after{
     font-weight: 500;
 }
 
-/* .home .home-content a{
+
+
+.home .home-content a{
     display: inline-block;
     background: #705df2;
     color: #fff;
@@ -397,7 +406,7 @@ section .title::after{
 .home .home-content a:hover{
     color: #705df2;
     background: none;
-} */
+}
 
 .social_links{
     display: flex;
@@ -414,11 +423,11 @@ section .title::after{
     border-radius: 50%;
     text-decoration: none;
     color: #705df2;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .fab:hover{
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 3px black;
     transition: all 0.3s ease;
 }
 
