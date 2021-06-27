@@ -916,13 +916,14 @@ experiences section styling
 }
 .loc{
     margin-top: 4%;
-    height:296px;
-    width: 529px;
+    height: 50%;
+    width: 100%;
     text-align: center;
-    border: 2px solid #705df2;
+    border: 2px solid var(--first-color);
     border-radius: 10px;
     overflow: hidden;
 }
+
 
 .map-zoom {
 	position: relative;
