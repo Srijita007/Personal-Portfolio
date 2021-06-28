@@ -97,7 +97,8 @@ section .title::before{
 
 section .title::after{
     position: absolute;
-    bottom: -8px;
+    /* bottom: -8px; */
+    top: 48px; /*for responsiveness */
     left: 50%;
     font-size: 20px;
     color: #705df2;
