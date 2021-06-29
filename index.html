@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -15,6 +16,33 @@
 
 </head>
 <body>
+    <!-- style switcher start -->
+    <div class="theme_selector outer_shadow">
+        <div class="theme_btn s-icon outer_shadow hover_in_shadow">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon outer_shadow hover_in_shadow">
+            <i class="fas fa-moon change_theme" id="mode-button"></i>
+        </div>
+        <h4>Theme Colors</h4>
+
+        <div class="colors_pallete">
+            <span id="purple" data-color="248" class="colors"></span>
+            <span id="green" data-color="135" class="colors"></span> 
+            <span id="blue" data-color="230" class="colors"></span>
+            <span id="pink" data-color="304" class="colors"></span>
+            <span id="light_pink" data-color="340" class="colors"></span>
+            <span id="yellow" data-color="36" class="colors"></span>
+            <span id="light_green" data-color="80" class="colors"></span>
+            <span id="light_blue" data-color="185" class="colors"></span>
+            <span id="c" data-color="277" class="colors"></span>
+            <span id="d" data-color="360" class="colors"></span>
+            <!-- <span id="a" data-color="197" class="colors"></span>
+            <span id="b" data-color="220" class="colors"></span> -->
+        </div>
+        <!-- style switcher end -->
+
+    </div>
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
@@ -26,12 +54,14 @@
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#projects" class="menu-btn">Projects</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#experiences" class="menu-btn">Experiences</a></li>
+                <li><a href="#qualification" class="menu-btn">Qualifications</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
+                <!-- <li><a class="fas fa-moon change_theme" id="mode-button"></a></li> -->
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
+            <!-- <i class="fas fa-hamburger"></i> -->
         </div>
     </nav>
     
@@ -62,14 +92,41 @@
                 <div class="home-content">
                     <div class="text-1">Hello, my name is</div>
                     <div class="text-2">Srijita Chakrabarty</div>
+                    <!-- <div class="text-4">
+                        <span id="S" style="color: greenyellow;">S</span>
+                        <span id="r" style="color: blueviolet;">r</span>
+                        <span id="i" style="color: crimson;">i</span>
+                        <span id="j" style="color: coral;">j</span>
+                        <span id="i" style="color: cornflowerblue;">i</span>
+                        <span id="t" style="color: rosybrown;">t</span>
+                        <span id="a" style="color: aqua;">a</span>
+                        <span id="space"> </span>
+                        <span id="C" style="color: burlywood;">C</span>
+                        <span id="h" style="color: brown;">h</span>
+                        <span id="a" style="color: palevioletred;">a</span>
+                        <span id="k" style="color: violet;">k</span>
+                        <span id="r" style="color: indigo;">r</span>
+                        <span id="a" style="color: blue;">a</span>
+                        <span id="b" style="color: green;">b</span>
+                        <span id="a" style="color: yellow;">a</span>
+                        <span id="r" style="color: orangered;">r</span>
+                        <span id="t" style="color: powderblue;">t</span>
+                        <span id="y" style="color: salmon;">y</span>
+                    </div> -->
                     <div class="text-3">And I'm a <span class="typing"></span></div>
                     <div id="hire"><a href="#contact">Hire me</a></div>
+
+                    <div class="img_box_landing">
+                        <!-- <img src="images/pattern.png" alt="blob" class="blob blob_orange"> -->
+                        <img src="images/blob.png" alt="blob" class="blob blob_purple">
+                        <img src="images/landing.png" alt="main_img" class="landing_img">
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
-
-    
+  
     <!-- about section start -->
     <section class="about" id="about">
         <div class="max-width">
@@ -91,7 +148,22 @@
                         with a strong foundation in logic and cross-platform coding. I am self-motivated with keen interest in learning and exploring new things.
                         I am here to make optimum utilization of my knowledge and skills and utilize opportunities 
                         effectively for professional growth and contribute the best for betterment of the organization and self.</p>
-                        <a target="_blank" href="./Docs/cv.pdf">Download CV</a>
+                        <a target="_blank" href="./Docs/cv.pdf">View CV</a>
+                        <!-- <div class="theme_tester">
+                            <div class="theme1" >1</div>
+                            <div class="theme2" >2</div>
+                            <div class="theme31" >3.1</div>
+                            <div class="theme32" >3.2</div>
+                            <div class="theme4" >4</div>
+                            <div class="theme5" >5</div>
+                            <div class="theme6" >6</div>
+                            <div class="theme7" >7</div>
+                            <div class="theme8" >8</div>
+                            <div class="theme9" >9</div>
+                            <div class="theme10">10</div>
+                            <div class="inner">inner</div>
+                            <div class="outer">outer</div>
+                        </div> -->
                 </div>
             </div>
         </div>
@@ -101,8 +173,8 @@
     <section class="projects" id="projects">
         <div class="max-width">
             <h2 class="title">My projects</h2>
-                <div class="proj-content owl-carousel" id="carousel_1">
-                    <a href="">
+                <div class="proj-content owl-carousel owl-theme" id="carousel_1">
+                    <a href="https://github.com/Srijita007/E-commerse-site" target="_blank">
                         <div class="card">
                             <div class="box">
                                 <i class="fas fa-shopping-cart"></i>
@@ -121,6 +193,8 @@
                                 <br>
                                 <div class="text">Portfolio Website</div>
                                 <p>An online portfolio Made with pure Html,Css and JavaScript.</p>
+                                <p>You are currently looking at it.</p>
+                                    <!-- <p>😄</p> -->
                                 <br>
                             </div>
                         </div>
@@ -132,6 +206,28 @@
                                 <div class="text">PMS (Project Management System)</div>
                                 <p>PMS helps it’s users to manage and track their projects in an efficient and structured 
                                     manner.</p>
+                                    <p>It is an ongoing project.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Srijita007/Hostel-Allocation-System" target="_blank">
+                        <div class="card">
+                            <div class="box">
+                                <i class="fas fa-building"></i>
+                                <div class="text">Hostel Allocation System</div>
+                                <p>This is a college project on Hostel Allocation System based on the gender.
+                                It has both an admin a general students login</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Srijita007/Movie-Ticket-Counter" target="_blank">
+                        <div class="card">
+                            <div class="box">
+                                <i class="fas fa-ticket-alt"></i>
+                                <div class="text">Movie Ticket Counter</div>
+                                <p>This is an online Movie tickets portal with a working payment process.</p>
+                                <p>It is created with php and MySql.</p>
+                                <p>The payment portal used was PayUMoney.</p>
                             </div>
                         </div>
                     </a>
@@ -150,7 +246,7 @@
                     <p>•	Was the at <a href="https://www.facebook.com/uemktm/photos/a.261191781428421/357505871797011/" target="_blank" ><strong><em>UEM Kolkata Toastmasters club</em></strong></a> for first 2 consecutive terms (2018-19)</p>
                     <p>•	Won 1st prize in the Club level <a href="https://www.facebook.com/uemktm/photos/a.261191781428421/382326639314934/" target="_blank"><strong><em>Speech Toastmasters contest</em></strong></a> (2019)</p>
                     <p>•	Was a member of <a href="https://www.facebook.com/Shantalaya-Swimming-Club-349696452343753/" target="_blank" ><strong><em>Santalaya Swimming Academy </em></strong></a>for 7 years (2010-14)</p>
-                    <p>•	Currently practising Karate at <a href="https://www.facebook.com/bonhooglykalyansangha/" target="_blank" ><strong><em>Kalyan Sanga</em></strong></a> </p>  
+                    <p>•	Currently practising Karate at <a href="https://www.facebook.com/bonhooglykalyansangha/" target="_blank" ><strong><em>Bonhoogly Kalyan Sanga</em></strong></a> </p>  
                 </div>
                 <div class="column right">
                     <div class="text head">Languages I know.</div>
@@ -207,7 +303,159 @@
         </div>
     </section>
 
+    <!-- qualification section start -->
+    <section class="qualification" id="qualification">
+        <div class="max-width">
+            <h2 class="title">My qualification</h2>
+            <div class="qualification_container container">
+
+                <div class="qualification_tabs">
+                    <div class="qualification_btn button--flex qualification_active" data-target='#education'>
+                        <i class="fas fa-user-graduate qualification_icon"></i>
+                        Education
+                    </div>
+                    <div class="qualification_btn button--flex" data-target='#work'>
+                        <i class="fas fa-briefcase qualification_icon"></i>
+                        Work
+                    </div>
+                </div>
+
+                <div class="qualification_section">
+                    <div class="qualification_content qualification_active" data-content id="education">
+                        <!-- ==================== EDUCATION DATA 1 ===================== -->
+                        <div class="qualification_data">
+                            <div class="qualification_left">
+                                <h3 class="qualification_title">B.Tech (CSE)</h3>
+                                <p>CGPA - 9.40 (Till 5th sem)</p>
+                                <span class="qualification_subtitle">University of engineering and Management, Kolkata</span>
+                                <div class="qualification_calender">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    2018-2022
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification_circle"><i class="fas fa-graduation-cap"></i></span>
+                                <span class="qualification_line"></span>
+
+                            </div>
+                        </div>
+                        <!-- ==================== EDUCATION DATA 2 ===================== -->
+
+                        <div class="qualification_data">
+                            <div></div>
+                            <div>
+                                <span class="qualification_circle"><i class="fas fa-graduation-cap"></i></span>
+                                <span class="qualification_line"></span>
+
+                            </div>
+                            <div>
+                                <h3 class="qualification_title">ISC</h3>
+                                <p>Percentage - 85%</p>
+                                <span class="qualification_subtitle">Assembly of God Church School, Sodepur</span>
+                                <div class="qualification_calender">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    2018
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!-- ==================== EDUCATION DATA 3 ===================== -->
+
+                        <div class="qualification_data">
+                            <div class="qualification_left">
+                                <h3 class="qualification_title">ICSE</h3>
+                                <p>Percentage - 94%</p>
+                                <span class="qualification_subtitle">Assembly of God Church School, Sodepur</span>
+                                <div class="qualification_calender">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    2016
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification_circle"><i class="fas fa-graduation-cap"></i></span>
+                                <span class="qualification_line"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qualification_content" data-content id="work">
+                        
+                        <!-- ==================== WORK DATA 1 ===================== -->
+
+                        <div class="qualification_data"> 
+                            <div>
+                                <a href="https://www.scienovelx.com/" target="_blank">
+                                    <div class="box qualification_left">
+                                        <img src="images/scienovelxlogo.jpg" alt="">                                    
+                                        <h3 class="qualification_title">Content Manager</h3>
+                                        <span class="qualification_subtitle">ScienovelX Educations and Technology Solutions Pvt. Ltd.</span>
+                                        <div class="qualification_calender">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            April 2021-present
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>                              
+                            <div>
+                                <span class="qualification_circle"><i class="fas fa-briefcase"></i></span>
+                                <span class="qualification_line"></span>
+
+                            </div>
+                        </div>
+                        <!-- ==================== WORK DATA 2 ===================== -->
+
+                        <div class="qualification_data">
+                            <div></div>
+                            <div>
+                                <span class="qualification_circle"><i class="fas fa-briefcase"></i></span>
+                                <span class="qualification_line"></span>
+
+                            </div>
+                            <div>
+                                <a href="./images/Love_All_Serve_All_ID_Proof.jpg" target="_blank">
+
+                                    <div class="box">
+                                        <img src="images/Love_All_Serve_All.png" alt="">
+                                        <h3 class="qualification_title">Project Head</h3>
+                                        <span class="qualification_subtitle">Love All Serve All NGO</span>
+                                        <div class="qualification_calender">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            March 2021-present
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+
+                        <!-- <div class="qualification_data">
+                            <div>
+                                <h3 class="qualification_title">JOB</h3>
+                                <span class="qualification_subtitle">cOMPANY NAME</span>
+                                <div class="qualification_calender">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    2018-2022
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification_circle"><i class="fas fa-briefcase"></i></span>
+                                <span class="qualification_line"></span>
+
+                            </div>
+                        </div> -->
+
+                        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- experiences section start -->
+    <!-- display is set to none -->
     <section class="experiences" id="experiences">
         <div class="max-width">
             <h2 class="title">My experiences</h2>
@@ -267,18 +515,14 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="icons">
+
                         <div class="row">
                             <i class="fas fa-user"></i>
                             <div class="info">
                                 <div class="head">Name</div>
                                 <div class="sub-title">Srijita Chakrabarty</div>
                             </div>
-                            <div class="social_links">
-                                <a href="https://www.linkedin.com/in/srijita-chakrabarty-4a0476200/" class="fab fa-linkedin-in"></a>
-                                <a href="https://github.com/Srijita007" class="fab fa-github"></a>
-                            </div>
                         </div>
-
 
                         <div class="row">
                             <i class="fas fa-map-marker-alt"></i>
@@ -287,6 +531,7 @@
                                 <div class="sub-title">6/1 Ahiri Pukur 2nd lane Kolkata-700019, West Bengal, India</div>
                             </div>
                         </div>
+
                         <div class="row">
                             <i class="fas fa-envelope"></i>
                             <div class="info">
@@ -298,7 +543,7 @@
 
                     <div class="loc map-zoom">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.098599200735!2d88.35860621404613!3d22.537978939922482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277204f25693d%3A0x31d9245c3dd58945!2s6%2C%201%2C%20Ahiripukur%20Second%20Ln%2C%20Lower%20Range%2C%20Beck%20Bagan%2C%20Ballygunge%2C%20Kolkata%2C%20West%20Bengal%20700017!5e0!3m2!1sen!2sin!4v1623159105188!5m2!1sen!2sin" 
-                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                         style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                     <!-- <div class="loc" id="map"></div> -->
                 </div>
@@ -331,6 +576,15 @@
     </section>
 
     <!-- footer section start -->
+    <div class="pre_footer container">
+        <P>Connect with me</P>
+        <div class="social_links">
+            <a href="https://www.facebook.com/srijita.chakrabarty.10" class="fab fa-facebook"></a>
+            <a href="https://www.linkedin.com/in/srijita-chakrabarty-4a0476200/" class="fab fa-linkedin-in"></a>
+            <a href="https://github.com/Srijita007" class="fab fa-github"></a>
+        </div>
+    </div>
+
     <footer>
         <span>Created By <a href="#">SrijitaChakrabarty</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span> 
     </footer>

@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-    // $('#hire').click(function(){
-    //     alert("clicked");
-    // });
     $(window).scroll(function(){
         // sticky navbar on scroll script
         if(this.scrollY > 20){
@@ -31,10 +28,15 @@ $(document).ready(function(){
         $('html').css("scrollBehavior", "smooth");
     });
     
+    // hover menu/navbar hamburger
+    $('.menu-btn').hover(function(){
+        $('.menu-btn i').toggleClass("fa-hamburger");
+    });
+
     // toggle menu/navbar script
     $('.menu-btn').click(function(){
         $('.my_navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
+        $('.menu-btn i').toggleClass("fa-times");
     });
     
     // typing text animation script
@@ -62,8 +64,7 @@ $(document).ready(function(){
         nav: false,
         responsive: {
             0:{
-                items: 1,
-                
+                items: 1,    
             },
             600:{
                 items: 2,
@@ -78,7 +79,7 @@ $(document).ready(function(){
         margin: 20,
         loop: true,
         autoplayTimeout: 2000,
-        autoplay:false,        
+        autoplay:true,        
         autoplayHoverPause: true,
         responsive: {
             0:{
@@ -111,6 +112,130 @@ function initMap() {
       map: map,
     });
   }
+
+
+//   QUALIFICATION TABS
+const tabs = document.querySelectorAll('[data-target]'),
+    tabContents = document.querySelectorAll('[data-content]');
+
+tabs.forEach(tab =>{
+    tab.addEventListener('click', () =>{
+        const target = document.querySelector(tab.dataset.target)
+        
+        tabContents.forEach(tabContent =>{
+            tabContent.classList.remove('qualification_active')
+        })
+        target.classList.add('qualification_active')
+
+        tabs.forEach(tab =>{
+            tab.classList.remove('qualification_active')
+        })
+        tab.classList.add('qualification_active')
+
+    })
+})
+
+// DAY AND NIGHT THEME
+const themeButton = document.getElementById('mode-button')
+
+const darkTheme = 'dark-theme'
+
+const iconTheme = 'fa-sun'
+
+// Previously selected topic (if user selected)
+
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+
+const getCurrentTheme = ()=> document.body.classList.contains(darkTheme)? 'dark': 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-moon': 'fa-sun'
+
+
+// We validate if the user previously chose a topic
+
+if (selectedTheme) {
+
+// If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon==='fa-moon' ? 'add': 'remove' ] (iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button 
+themeButton.addEventListener('click', () => {
+
+// Add or remove the dark / icon theme
+console.log("clicked")
+document.body.classList.toggle(darkTheme) 
+themeButton.classList.toggle(iconTheme)
+
+// We save the theme and the current icon that the user chose 
+localStorage.setItem('selected-theme', getCurrentTheme()) 
+localStorage.setItem('selected-icon', getCurrentIcon())
+
+})
+
+
+
+
+
+/*============= Theme switcher =========================*/
+
+const styleSwitcherToggler = document.querySelector(".theme_btn");
+
+styleSwitcherToggler.addEventListener("click", () =>{ 
+    document.querySelector(".theme_selector").classList.toggle("open");
+
+})
+
+/* hide style switcher on scroll */
+window.addEventListener("scroll", () =>{
+
+if(document.querySelector(".theme_selector").classList.contains ("open")){ 
+    document.querySelector(".theme_selector").classList.remove("open");
+   }
+})
+
+/* hide style switcher on clicking anywhere outside the theme selector */
+const theme_selector = document.querySelector('.theme_selector')
+document.addEventListener("click", (event) =>{
+
+    if(event.target.closest('.theme_selector'))
+        return
+    document.querySelector(".theme_selector").classList.remove("open");
+})
+
+// theme colors
+
+const colors = document.getElementsByClassName('colors');
+let i;
+for (i = 0;i<colors.length; i++){
+    colors[i].addEventListener('click', changecolor)
+}
+var r = document.querySelector('body');
+function changecolor(){
+    let color = this.getAttribute('data-color'); 
+    r.style.setProperty('--hue-color', color);
+}
+
+
+// To store the theme
+
+// const themeNo = localStorage.getItem('data-color')
+// if(themeNo == null){
+//     themeNo = 248
+// }else{
+//     changecolor();
+//     themeNo = color
+// }
+
+// localStorage.setItem(themeNo,color)
+
+// if(theme == 'null')
+
+// const selectedIcon = localStorage.getItem('selected-icon')
 
 
 // function hide() {
