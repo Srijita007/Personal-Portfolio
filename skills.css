@@ -26,7 +26,15 @@ a:link{
 }
 
 #lio{
-    color: black;
+    color: var(--straight-bnw);
+}
+
+.menu-btn.sticky{
+    color: var(--bg-black);
+}
+
+.fa-times{
+    color: var(--straight-bnw);
 }
 
 
@@ -286,4 +294,11 @@ em:hover{
 
 .achieve_content p{
     color: var(--black-lighter);
+}
+
+
+@media (max-width: 500px){
+.skills .title{
+    margin: 20px auto 60px auto;
+}
 }
