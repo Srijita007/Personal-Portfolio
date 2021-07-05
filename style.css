@@ -20,11 +20,13 @@ html{
     background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    border-radius: 5px;
+    background: hsl(var(--hue-color),85%,66%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    /* background: #555; */
+    background: hsl(var(--hue-color),85%,56%);
 }
 
 /* all similar content styling codes */
