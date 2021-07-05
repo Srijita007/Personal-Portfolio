@@ -825,6 +825,11 @@ section .title::after{
     margin: 0 10%;
 }
 
+.skills_icons .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .skills_icons .fab{
     /* background-color: var(--first-color); */
     /* color: var(--first-color); */
@@ -972,6 +977,7 @@ QUALIFICATION section styling
     /* box-shadow: -5px 5px var(--outer-shadow); */
     height: 100%;
     width: 80%;
+    min-width: 100px;
 }
 
 .qualification_left{
@@ -979,10 +985,10 @@ QUALIFICATION section styling
     text-align: right;
 }
 
-.qualification_data img{
-    height: 110px;
-    width: 100px;
-    margin: 5% 30%;
+.qualification_data .box img{
+    height: 50%;
+    width: 50%;
+    margin: 5% auto;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid var(--first-color);
@@ -1681,6 +1687,12 @@ Line-height: 40px;
     .img_box_landing .landing_img{
         height: 45%;
     }
+    .qualification_data .box{
+        padding: 50px 5px
+    }
+    .qualification_data .box img{
+        display: none;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1716,6 +1728,10 @@ Line-height: 40px;
         height: 45%;
     }
     .effect_1,.effect_3{
+        display: none;
+    }
+
+    .qualification_data .box img{
         display: none;
     }
 }

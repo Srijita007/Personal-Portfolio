@@ -99,14 +99,14 @@ $(document).ready(function(){
 
 // Initialize and add the map
 function initMap() {
-    // The location of Uluru
+    // The location of Beckbagan
     const beckbagan = { lat: 22.538142445390086, lng: 88.36075198119023 };
-    // The map, centered at Uluru
+    // The map, centered at Beckbagan
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 400,
       center: beckbagan,
     });
-    // The marker, positioned at Uluru
+    // The marker, positioned at Beckbagan
     const marker = new google.maps.Marker({
       position: beckbagan,
       map: map,
@@ -167,7 +167,6 @@ if (selectedTheme) {
 themeButton.addEventListener('click', () => {
 
 // Add or remove the dark / icon theme
-console.log("clicked")
 document.body.classList.toggle(darkTheme) 
 themeButton.classList.toggle(iconTheme)
 
@@ -187,8 +186,25 @@ const styleSwitcherToggler = document.querySelector(".theme_btn");
 
 styleSwitcherToggler.addEventListener("click", () =>{ 
     document.querySelector(".theme_selector").classList.toggle("open");
-
+    
 })
+
+// Previously selected theme (if user selected)
+const selectedColor = localStorage.getItem('selected-color')
+// const themeNo = localStorage.getItem('data-color')
+
+// To store the theme
+var  my_body = document.querySelector('body');
+if(selectedColor == 'null'){
+    selectedColor = 248;
+    storecolor();
+}else{
+    storecolor();
+}
+
+function storecolor(){
+    my_body.style.setProperty('--hue-color', selectedColor);
+}  
 
 /* hide style switcher on scroll */
 window.addEventListener("scroll", () =>{
@@ -214,28 +230,13 @@ let i;
 for (i = 0;i<colors.length; i++){
     colors[i].addEventListener('click', changecolor)
 }
-var r = document.querySelector('body');
+// var r = document.querySelector('body');
 function changecolor(){
     let color = this.getAttribute('data-color'); 
-    r.style.setProperty('--hue-color', color);
+    my_body.style.setProperty('--hue-color', color);
+    localStorage.setItem('selected-color', color) 
 }
 
-
-// To store the theme
-
-// const themeNo = localStorage.getItem('data-color')
-// if(themeNo == null){
-//     themeNo = 248
-// }else{
-//     changecolor();
-//     themeNo = color
-// }
-
-// localStorage.setItem(themeNo,color)
-
-// if(theme == 'null')
-
-// const selectedIcon = localStorage.getItem('selected-icon')
 
 
 // function hide() {
