@@ -1145,7 +1145,7 @@ experiences section styling
 }
 .owl-dot{
     height: 13px;
-    width: 35px;
+    width: 13px;
     border-radius: 14px;
     margin: 0 5px;
     outline: none!important;
@@ -1154,8 +1154,7 @@ experiences section styling
     
 }
 .owl-dot.active{
-    width: 13px;
-    border-radius: 50%;
+    width: 35px;
 }
 .owl-dot.active:hover{
     background: var(--first-color)!important;
