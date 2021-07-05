@@ -6,6 +6,7 @@
     --bg-black-900: #ffffff;
     --bg-black-100: #353535; 
     --bg-black-50: #2b2c2f;
+    --bg-black: #000;
     --bg-opacity: rgba(43,44,47,0.5); 
     --text-black-900: #ffffff;
     --text-black-700: #ffffff;
@@ -51,6 +52,7 @@ body{
     --bg-black-900: black;
     --bg-black-100: #dddddd;
     --bg-black-50: #eff0f4;
+    --bg-black: #fff;
     --text-black-900: black;
     --text-black-700: #555555;
     --text-black-600: #666666;

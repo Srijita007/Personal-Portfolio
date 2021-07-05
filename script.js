@@ -7,6 +7,12 @@ $(document).ready(function(){
         }else{
             $('.my_navbar').removeClass("sticky");
         }
+
+        if(this.scrollY > 20){
+            $('.menu-btn').addClass("sticky");
+        }else{
+            $('.menu-btn').removeClass("sticky");
+        }
         
         // scroll-up button show/hide script
         if(this.scrollY > 500){

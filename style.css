@@ -308,6 +308,14 @@ section .title::after{
     display: none;
 }
 
+.menu-btn.sticky{
+    color: var(--bg-black);
+}
+
+.fa-times{
+    color: var(--straight-bnw);
+}
+
 
 .scroll-up-btn{
     position: fixed;
